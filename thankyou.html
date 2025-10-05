@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+.container {
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 20px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff7b00;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #e86900;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎉 Thank You for Your Order!</h1>
+  <p id="summary"></p>
+  <button onclick="backHome()">Back to Home</button>
+</div>
+
+<script>
+const name = localStorage.getItem("name");
+const item = localStorage.getItem("selectedItem");
+document.getElementById("summary").innerText = `${name}, your ${item} will be delivered soon!`;
+function backHome() {
+  window.location.href = "index.html";
+}
+</script>
+</body>
+</html>
