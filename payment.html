@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Page</title>
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1556741533-f6acd647d2fb') no-repeat center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-box {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+}
+button {
+  padding: 10px 20px;
+  background: #ff7b00;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #e86900;
+}
+</style>
+</head>
+<body>
+<div class="payment-box">
+  <h2>Payment</h2>
+  <p>Pay securely for your order</p>
+  <input type="text" placeholder="Card Number" required><br>
+  <input type="text" placeholder="MM/YY" required><br>
+  <input type="text" placeholder="CVV" required><br>
+  <button onclick="makePayment()">Pay Now</button>
+</div>
+
+<script>
+function makePayment() {
+  alert("Payment Successful!");
+  window.location.href = "thankyou.html";
+}
+</script>
+</body>
+</html>
