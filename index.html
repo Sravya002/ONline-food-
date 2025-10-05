@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Food Order</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  height: 100vh;
+}
+.overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  padding-top: 100px;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.item {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: 0.3s;
+}
+.item:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff7b00;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #e86900;
+}
+</style>
+</head>
+<body>
+<div class="overlay">
+  <h1>🍕 Welcome to Foodie World</h1>
+  <p>Order your favorite meals in just a few clicks!</p>
+  <div class="menu">
+    <div class="item">
+      <h3>Pizza</h3>
+      <p>₹299</p>
+      <button onclick="orderNow('Pizza')">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Burger</h3>
+      <p>₹149</p>
+      <button onclick="orderNow('Burger')">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Pasta</h3>
+      <p>₹199</p>
+      <button onclick="orderNow('Pasta')">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Sandwich</h3>
+      <p>₹99</p>
+      <button onclick="orderNow('Sandwich')">Order Now</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function orderNow(item) {
+  localStorage.setItem("selectedItem", item);
+  window.location.href = "form.html";
+}
+</script>
+</body>
+</html>
